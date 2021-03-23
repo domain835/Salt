@@ -1,0 +1,166 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+:focus {
+  outline: none;;
+}
+
+h2, p {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1172px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+body {
+  color: #878787;
+  font-size: 16px;
+  line-height: 22px;
+  font-family: Proxima Nova;
+  font-weight: 400;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.top {
+  background: url('../images/top-section-bkg.png') no-repeat top center;
+  background-size: auto;
+  height: 1600px;
+  color: #fff;
+
+  &__slider {
+    margin: 138px 0 0 82px;
+
+    &-item {
+      position: relative;
+    }
+
+    &-title {
+      font-size: 55px;
+      font-weight: 500;
+      line-height: 38px;
+      max-width: 560px;
+    }
+
+    &-text {
+      line-height: 30px;
+      margin: 30px 0 50px;
+      max-width: 560px;
+    }
+
+    &-img {
+      position: absolute;
+      top: 50%;
+      right: calc(25% - 82px);
+      transform: translate(25%, -50%);
+    }
+
+    .slick-dots {
+      position: absolute;
+      right: -174px;
+      top: 50%;
+      transform: translateY(-50%);
+
+      button {
+        font-size: 0;
+        height: 24px;
+        width: 24px;
+        background: url(../images/slider-dots.png) no-repeat;
+        background-position: 2px -29px;
+        border: 0;
+        background-size: auto;
+        animation: fadeIn ease .5s;
+        margin: 6px 0;
+        
+      }
+
+      @keyframes fadeIn {
+        0% {opacity:0;}
+        100% {opacity:1;}
+        }
+
+      .slick-active {
+        
+        button {
+          background-position: 0 0;
+        }
+      }
+    }
+  }
+}
+
+.orange-btn {
+  text-transform: uppercase;
+  color: #fff;
+  padding:22px 40px ;
+  background: #ff8b00;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  transition: all .5s;
+  display: inline-block;
+
+  &:hover {
+    color:#ff8b00;
+    background: #5f49ce;
+    border: 1px solid #ff8b00;
+  }
+}
+
+.header {
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 32px 0 0;
+  }
+}
+
+.menu {
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    margin-left: 30px;
+  }
+
+  &__list-link {
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: bold;
+    font-size: 14px;
+    padding-bottom: 9px;
+    transition: all .5s;
+    border-bottom: 3px solid transparent;
+    letter-spacing: 1px;
+
+    &:hover {
+      border-bottom: 3px solid #ff8b00;
+    }
+  }
+}

@@ -46,8 +46,9 @@ body {
 .top {
   background: url('../images/top-section-bkg.png') no-repeat top center;
   background-size: auto;
-  height: 1600px;
+  height: 810px;
   color: #fff;
+  position: relative;
 
   &__slider {
     margin: 138px 0 0 82px;
@@ -95,11 +96,6 @@ body {
         
       }
 
-      @keyframes fadeIn {
-        0% {opacity:0;}
-        100% {opacity:1;}
-        }
-
       .slick-active {
         
         button {
@@ -108,14 +104,32 @@ body {
       }
     }
   }
+
+  &__more-btn {
+    text-transform: uppercase;
+    font-weight: 500;
+    line-height: 10px;
+    color:#fff;
+    background: url('../images/more-btn-icon.png') no-repeat;
+    background-position: center bottom;
+    padding-bottom: 94px;
+    // display: block;
+    // margin: 140px auto 50px;
+    // text-align: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 50px;
+  }
 }
 
 .orange-btn {
   text-transform: uppercase;
   color: #fff;
-  padding:22px 40px ;
+  padding:20px 40px ;
   background: #ff8b00;
   font-size: 14px;
+  line-height: 10px;
   font-weight: 500;
   border-radius: 4px;
   border: 1px solid transparent;

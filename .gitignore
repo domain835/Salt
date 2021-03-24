@@ -2,3 +2,4 @@
 /dist
 *.log
 /app/css/style.min.css
+/app/js/main.min.js

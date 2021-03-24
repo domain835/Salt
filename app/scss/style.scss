@@ -178,3 +178,27 @@ body {
     }
   }
 }
+
+.stat {
+  display: flex;
+  padding: 146px 0 130px;
+  justify-content: center;
+  
+  &__item {
+    color: #7050e5;
+    font-weight: 700;
+    margin: 0 43px;
+    text-align: center;
+
+    &-data {
+      font-size: 60px;
+      display: inline-block;
+      line-height: 44px;
+    }
+
+    &-text {
+      text-transform: uppercase;
+      margin-top: 24px;
+    }
+  }
+}

@@ -12,7 +12,7 @@ html {
   outline: none;;
 }
 
-h2, p {
+h1, h2, p {
   margin: 0;
 }
 
@@ -199,6 +199,30 @@ body {
     &-text {
       text-transform: uppercase;
       margin-top: 24px;
+    }
+  }
+}
+
+.we-do {
+  background: #f8f8f8;
+  padding-top: 120px;
+
+  &__title {
+    color: #7050e5;
+    font-size: 60px;
+    line-height: 44px;
+    text-align: right;
+    margin: 0 73px;
+    padding: 40px 50px;
+    background: url('../images/we-do-title-bkg.png') no-repeat;
+    background-position: top right;
+  }
+
+  &__item {
+    width: 274px;
+
+    &-img {
+
     }
   }
 }

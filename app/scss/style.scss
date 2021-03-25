@@ -213,16 +213,48 @@ body {
     line-height: 44px;
     text-align: right;
     margin: 0 73px;
-    padding: 40px 50px;
+    padding: 40px 50px 80px;
     background: url('../images/we-do-title-bkg.png') no-repeat;
     background-position: top right;
   }
 
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 0 85px;
+  }
+
   &__item {
-    width: 274px;
+    width: calc(100% / 3);
+    max-width: 330px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 33px 28px 0;
+    position: relative;
+
+    &-img-wrapper {
+      height: 150px;
+      display: flex;
+      align-items: flex-end;
+    }
 
     &-img {
+      height: fit-content;
+    }
 
+    &-title {
+      align-self: flex-start;
+      font-weight: 500;
+      color: #7050e5;
+      text-transform: uppercase;
+      line-height: 16px;
+      margin-top: 30px;
+    }
+
+    &-text {
+      margin-top: 10px;
     }
   }
 }

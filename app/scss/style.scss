@@ -205,7 +205,7 @@ body {
 
 .we-do {
   background: #f8f8f8;
-  padding-top: 120px;
+  padding: 120px 0 102px;
 
   &__title {
     color: #7050e5;
@@ -256,5 +256,32 @@ body {
     &-text {
       margin-top: 10px;
     }
+  }
+}
+
+.spotlight {
+  display: flex;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding-top: 106px;
+  justify-content: space-between;
+  align-items: center;
+
+  &__descr {
+    max-width: 456px;
+
+    &-title {
+      color: #7050e5;
+      font-size: 40px;
+      line-height: 30px;
+    }
+
+    &-text {
+      margin: 20px 0 30px;
+    }
+  }
+
+  &__video {
+
   }
 }

@@ -138,7 +138,7 @@ body {
 
   &:hover {
     color:#ff8b00;
-    background: #5f49ce;
+    background: transparent;
     border: 1px solid #ff8b00;
   }
 }
@@ -263,7 +263,7 @@ body {
   display: flex;
   max-width: 1300px;
   margin: 0 auto;
-  padding-top: 106px;
+  padding: 106px 0 120px;
   justify-content: space-between;
   align-items: center;
 
@@ -283,5 +283,23 @@ body {
 
   &__video {
 
+  }
+}
+
+.started {
+  background: url('../images/ready-bkg.jpg') no-repeat center;
+
+  &__content {
+    display: flex;
+    padding: 90px 0 74px;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+  }
+
+  &__text {
+    font-size: 40px;
+    line-height: 30px;
+    font-weight: 500;
   }
 }

@@ -113,9 +113,6 @@ body {
     background: url('../images/more-btn-icon.png') no-repeat;
     background-position: center bottom;
     padding-bottom: 94px;
-    // display: block;
-    // margin: 140px auto 50px;
-    // text-align: center;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -176,6 +173,10 @@ body {
     &:hover {
       border-bottom: 3px solid #ff8b00;
     }
+  }
+
+  &__toggle {
+    display: none;
   }
 }
 
@@ -306,6 +307,7 @@ body {
 
 .footer {
   background: #363636;
+  position: relative;
 
   &__content  {
     display: flex;
@@ -356,8 +358,30 @@ body {
       }
     }
 
-    &:nth-child(1), &:nth-child(2){
+    &:nth-child(1), 
+    &:nth-child(2) {
       width: calc(100% / 3);
+    }
+  }
+
+  &__logo {
+    position: absolute;
+    bottom: 59px;
+    right: 33px;
+  }
+
+  &__copyright {
+    background: #252525;
+    height: 31px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    &-text {
+      font-family: Raleway;
+      font-size: 10px;
+      text-transform: uppercase;
+      color: #9b9b9b;
     }
   }
 }
@@ -436,21 +460,6 @@ body {
   }
 }
 
-.copyright {
-  background: #252525;
-  height: 31px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  &__text {
-    font-family: Raleway;
-    font-size: 10px;
-    text-transform: uppercase;
-    color: #9b9b9b;
-  }
-}
-
 .hexagon-dot {
 
   &::before {
@@ -460,5 +469,34 @@ body {
     background: url('../images/hexagon-dot.png') no-repeat;
     display: inline-block;
     margin: 0 4px;
+  }
+}
+
+@media (max-width: 767px) {
+
+  .menu__list {
+    display: none;
+  }
+
+  .menu__toggle {
+    display: block;
+    cursor: pointer;
+    width: 35px;
+    height: 24px;
+    border: none;
+    border-top: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    background-color: transparent;
+    position: relative;
+  }
+
+  .menu__toggle::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 9px;
+    width: 35px;
+    height: 2px;
+    background-color: #fff;
   }
 }

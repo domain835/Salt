@@ -314,6 +314,12 @@ body {
     padding: 56px 0 48px;
   }
 
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    width: calc(100% - 405px);
+  }
+
   &__item {
 
     &-title {
@@ -349,8 +355,11 @@ body {
         margin-bottom: 14px;
       }
     }
-  }
 
+    &:nth-child(1), &:nth-child(2){
+      width: calc(100% / 3);
+    }
+  }
 }
 
 .feed {
@@ -424,5 +433,32 @@ body {
       color: #555555;
       font-size: 12px;
     }
+  }
+}
+
+.copyright {
+  background: #252525;
+  height: 31px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__text {
+    font-family: Raleway;
+    font-size: 10px;
+    text-transform: uppercase;
+    color: #9b9b9b;
+  }
+}
+
+.hexagon-dot {
+
+  &::before {
+    content: '';
+    height: 10px;
+    width: 10px;
+    background: url('../images/hexagon-dot.png') no-repeat;
+    display: inline-block;
+    margin: 0 4px;
   }
 }

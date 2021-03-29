@@ -3,14 +3,7 @@ $(function () {
   $('.top__slider').slick({
     arrows: false,
     dots: true,
-    // autoplay: true,
-    // responsive:
-    //   {
-    //     brakpoints: 1500,
-    //     settings: {
-    //       img: false
-    //     }
-    //   }
+    // autoplay: true
   });
 
   $('.menu__toggle').on('click', function() {
@@ -18,3 +11,19 @@ $(function () {
   });
 
 });
+
+function scrollTo(element) {
+  window.scroll({
+    left: 0,
+    top: element.offsetTop,
+    behavior: 'smooth'
+  })
+}
+
+const button = document.querySelector('.top__more-btn');
+const weDo = document.querySelector('.we-do');
+
+button.addEventListener('click', () => {
+  scrollTo(weDo);
+});
+

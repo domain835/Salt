@@ -28,8 +28,8 @@ a {
 }
 
 .container {
-  max-width: 1172px;
-  padding: 0 10px;
+  max-width: 1182px;
+  padding: 0 15px;
   margin: 0 auto;
 }
 
@@ -51,7 +51,7 @@ body {
   position: relative;
 
   &__slider {
-    margin: 138px 0 0 82px;
+    padding: 138px 0 0 82px;
 
     &-item {
       position: relative;
@@ -80,26 +80,26 @@ body {
     .slick-dots {
       position: absolute;
       right: -174px;
-      top: 50%;
-      transform: translateY(-50%);
+      bottom: 50%;
+      transform: translateY(50%);
 
       button {
         font-size: 0;
         height: 24px;
         width: 24px;
         background: url(../images/slider-dots.png) no-repeat;
-        background-position: 2px -29px;
+        background-position: 4px -29px;
         border: 0;
         background-size: auto;
         animation: fadeIn ease .5s;
-        margin: 6px 0;
-        
+        margin: 6px 6px;
+        padding: 0;
       }
 
       .slick-active {
         
         button {
-          background-position: 0 0;
+          background-position: 2px 0;
         }
       }
     }
@@ -177,6 +177,7 @@ body {
 
   &__toggle {
     display: none;
+    z-index: 2;
   }
 }
 
@@ -472,7 +473,34 @@ body {
   }
 }
 
+@media (max-width: 1500px) {
+
+  .top {
+
+    &__slider {
+
+      .slick-dots {
+        bottom: -50px;
+        right: 50%;
+        transform: translateX(50%);
+      }
+    }
+  }
+ 
+
+  .slick-dots li {
+    display: inline-block;
+  }
+}
+
 @media (max-width: 767px) {
+
+  .header {
+
+    &__inner {
+      padding-top: 15px;
+    }
+  }
 
   .menu__item {
     margin: 0;
@@ -481,12 +509,14 @@ body {
   .menu__list {
     display: block;
     position: absolute;
-    top: 132px;
+    top: 0;
     left: 0;
     right: 0;
-    padding: 20px 10px;
+    padding: 90px 10px;
     transform: translateY(-600px);
     transition: all .5s;
+    background-color: #6249cf;
+    z-index: 1;
   }
 
   .menu__list.menu__list--active {
@@ -520,4 +550,32 @@ body {
     height: 2px;
     background-color: #fff;
   }
+
+  .top__slider {
+    padding: 70px 50px;
+  }
+
+  .top__slider-item {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .top__slider-title {
+    font-size: 30px;
+    line-height: 30px;
+  }
+
+  .top__slider-text {
+    margin: 20px 0;
+  }
+
+  .top__slider-img {
+    top: -999%;
+  }
+
+  .top__slider .slick-dots {
+    bottom: 0;
+  }
 }
+

@@ -474,8 +474,29 @@ body {
 
 @media (max-width: 767px) {
 
+  .menu__item {
+    margin: 0;
+  }
+
   .menu__list {
-    display: none;
+    display: block;
+    position: absolute;
+    top: 132px;
+    left: 0;
+    right: 0;
+    padding: 20px 10px;
+    transform: translateY(-600px);
+    transition: all .5s;
+  }
+
+  .menu__list.menu__list--active {
+    transform: translateY(0);
+  }
+
+  .menu__list-link {
+    display: block;
+    padding: 20px 0;
+    text-align: center;
   }
 
   .menu__toggle {

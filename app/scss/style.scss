@@ -1,3 +1,6 @@
+@import 'vars';
+@import 'libs';
+
 html {
   box-sizing: border-box;
 }
@@ -494,6 +497,45 @@ body {
   }
 }
 
+@media (max-width: 1152px) {
+
+  .footer__content {
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 30px;
+  }
+
+  .footer__items {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 30px;
+  }
+
+  .footer__item,
+  .footer__item:nth-child(1),
+  .footer__item:nth-child(2){
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer__logo {
+    display: none;
+  }
+
+  .footer__copyright-text {
+    font-size: 8px;
+
+    .hexagon-dot {
+      display: none;
+    }
+  }
+}
+
 @media (max-width: 767px) {
 
   .header {
@@ -645,30 +687,5 @@ body {
     margin-bottom: 30px;
   }
 
-  .footer__content {
-    flex-direction: column;
-    align-items: center;
-  }
 
-  .footer__items {
-    flex-direction: column;
-    align-items: center;
-    // width: 100%;
-  }
-
-  .footer__item {
-    width: 100%;
-  }
-
-  .footer__logo {
-    display: none;
-  }
-
-  .footer__copyright-text {
-    font-size: 8px;
-
-    .hexagon-dot {
-      display: none;
-    }
-  }
 }
